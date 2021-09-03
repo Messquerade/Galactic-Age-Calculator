@@ -4,7 +4,13 @@ export default class SolarAge {
   }
   
   makeConversionMap () {
-    
+    let conversions = new Map (
+      [
+        [],
+        []
+      ]
+    );
+    return conversions;
   }
 
   calculateMarsAge () {
