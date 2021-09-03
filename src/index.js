@@ -2,9 +2,9 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import HelloWorld from "./business";
+import SolarAge from "./business";
 
 $("#click-me").click(function () {
-  let message = HelloWorld();
+  let message = SolarAge.earthYears;
   $("h2").text(message);
 });
