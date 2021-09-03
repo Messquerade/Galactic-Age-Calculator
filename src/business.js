@@ -1,6 +1,8 @@
 export default class SolarAge {
-  constructor(age) {
+  constructor(age, gender, continent) {
     this.earthYears = age;
+    this.gender = gender;
+    this.continent = continent;
   }
   
   makeConversionMap () {
