@@ -63,7 +63,8 @@ describe('SolarAge', () => {
     expect(anotherAge.earthYearsOver).toEqual(11);
     expect(anotherAge.marsYearsOver).toEqual(6);
     expect(anotherAge.mercuryYearsOver).toEqual(46);
-    expect(anotherAge.venusYearsOver).toEqual()
+    expect(anotherAge.venusYearsOver).toEqual(18);
+    expect(anotherAge.jupiterYearsOver).toEqual(1);
 
   })
 });

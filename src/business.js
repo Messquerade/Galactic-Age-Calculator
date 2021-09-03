@@ -56,10 +56,18 @@ export default class SolarAge {
 
   calculateYearsDifference () {
     this.calculateLifeExpectancy();
-    this.earthYearsLeft = this.lifeExpectancy - this.earthYears;
-    this.marsYearsLeft = Math.round(this.earthYearsLeft / 1.88);
-    this.mercuryYearsLeft = Math.round(this.earthYearsLeft / 0.24);
-    this.venusYearsLeft = Math.round(this.earthYearsLeft / .62);
-    this.jupiterYearsLeft = Math.round(this.earthYearsLeft / 11.86);
+    if (this.lifeExpectancy >= this.earthYears) {
+      this.earthYearsLeft = this.lifeExpectancy - this.earthYears;
+      this.marsYearsLeft = Math.round(this.earthYearsLeft / 1.88);
+      this.mercuryYearsLeft = Math.round(this.earthYearsLeft / 0.24);
+      this.venusYearsLeft = Math.round(this.earthYearsLeft / .62);
+      this.jupiterYearsLeft = Math.round(this.earthYearsLeft / 11.86);
+    } else {
+      this.earthYearsOver = this.earthYears - this.lifeExpectancy;
+      this.marsYearsOver = Math.round(this.earthYearsOver / 1.88);
+      this.mercuryYearsOver = Math.round(this.earthYearsOver / 0.24);
+      this.venusYearsOver = Math.round(this.earthYearsOver / 0.62);
+      this.jupiterYearsOver = Math.round(this.earthYearsOver / 11.86);
+    }
   }
 }
