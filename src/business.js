@@ -3,6 +3,7 @@ export default class SolarAge {
     this.earthYears = age
   }
 
+
   calculateMarsAge () {
     this.marsYears = Math.round(this.earthYears / 1.88)
   }
