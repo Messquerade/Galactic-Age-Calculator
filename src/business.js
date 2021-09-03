@@ -6,8 +6,10 @@ export default class SolarAge {
   makeConversionMap () {
     let conversions = new Map (
       [
-        [],
-        []
+        ["Mars", 1.88],
+        ["Mercury", .24],
+        ["Venus", .62],
+        ["Jupiter", 11.86]
       ]
     );
     return conversions;
