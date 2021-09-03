@@ -1,6 +1,6 @@
 export default class SolarAge {
   constructor(age) {
-    this.earthYears = age
+    this.earthYears = age;
   }
   
   makeConversionMap () {
@@ -15,7 +15,7 @@ export default class SolarAge {
     return conversions;
   }
 
-  calculateMarsAge () {
-    this.marsYears = Math.round(this.earthYears / 1.88)
+  calculateSolarAge () {
+    // this.marsYears = Math.round(this.earthYears / 1.88);
   }
 }
