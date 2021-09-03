@@ -35,8 +35,16 @@ describe('SolarAge', () => {
     expect(reusableAge.jupiterYears).toEqual(2);
   });
 
-  test('should return life expectancy in Earth years dependent on continent lived on', () => {
+  test('should add property to SolarAge object of life expectancy in Earth years dependent on continent lived on', () => {
     reusableAge.calculateLifeExpectancy();
     expect(reusableAge.lifeExpectancy).toEqual(81);
+  })
+
+  test('should add property to SolarAge object of life expectancy in Earth years dependent on continent and gender', () => {
+    let newAge = new SolarAge(55, "male", "Oceania");
+    let anotherAge = new SolarAge(90, "non-binary", "Europe")
+    newAge.calculateLifeExpectancy();
+    expect(newAge.lifeExpectancy).toEqual(77);
+    expect(anotherAge.lifeExpectancy).toEqual(79);
   })
 });
