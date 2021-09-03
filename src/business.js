@@ -70,4 +70,8 @@ export default class SolarAge {
       this.jupiterYearsOver = Math.round(this.earthYearsOver / 11.86);
     }
   }
+
+  solarAgeSummary () {
+    
+  }
 }

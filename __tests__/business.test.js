@@ -65,6 +65,19 @@ describe('SolarAge', () => {
     expect(anotherAge.mercuryYearsOver).toEqual(46);
     expect(anotherAge.venusYearsOver).toEqual(18);
     expect(anotherAge.jupiterYearsOver).toEqual(1);
+  })
 
+  test('should return a summary of SolarAge object with age on each planet', () => {
+    expect(reusableAge.solarAgeSummary()).toMatch("Age on Mercury: 117 years");
+    expect(reusableAge.solarAgeSummary()).toMatch("Age on Venus: 45 years");
+    expect(reusableAge.solarAgeSummary()).toMatch("Age on Mars: 15 years");
+    expect(reusableAge.solarAgeSummary()).toMatch("Age on Jupiter: 2 years");
   })
 });
+// Age on Venus: 45 years
+// Age on Mars: 15 years
+// Age on Jupiter: 2 years
+// Time left to live on Mercury: 221 years
+// Time left to live on Venus: 85 years
+// Time left to live on Mars: 28 years
+// Time left to live on Jupiter: 4 years
