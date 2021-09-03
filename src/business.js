@@ -75,14 +75,26 @@ export default class SolarAge {
     this.calculateSolarAge();
     this.calculateLifeExpectancy();
     this.calculateYearsDifference();
-    const summary = `Age on Mercury: ${this.mercuryYears} years
-    Age on Venus: ${this.venusYears} years
-    Age on Mars: ${this.marsYears} years
-    Age on Jupiter: ${this.jupiterYears} years
-    Time left to live on Mercury: ${this.mercuryYearsLeft} years
-    Time left to live on Venus: ${this.venusYearsLeft} years
-    Time left to live on Mars: ${this.marsYearsLeft} years
-    Time left to live on Jupiter: ${this.jupiterYearsLeft} years`;
+    let summary;
+    if (this.earthYearsLeft) {
+      summary = `Age on Mercury: ${this.mercuryYears} years
+      Age on Venus: ${this.venusYears} years
+      Age on Mars: ${this.marsYears} years
+      Age on Jupiter: ${this.jupiterYears} years
+      Time left to live on Mercury: ${this.mercuryYearsLeft} years
+      Time left to live on Venus: ${this.venusYearsLeft} years
+      Time left to live on Mars: ${this.marsYearsLeft} years
+      Time left to live on Jupiter: ${this.jupiterYearsLeft} years`;
+    } else {
+      summary = `Age on Mercury: ${this.mercuryYears} years
+      Age on Venus: ${this.venusYears} years
+      Age on Mars: ${this.marsYears} years
+      Age on Jupiter: ${this.jupiterYears} years
+      Time lived past life expectancy on Mercury: ${this.mercuryYearsOver} years
+      Time lived past life expectancy on Venus: ${this.venusYearsOver} years
+      Time lived past life expectancy on Mars: ${this.marsYearsOver} years
+      Time lived past life expectancy on Jupiter: ${this.jupiterYearsOver} years`;
+    }
     return summary;
   }
 }
