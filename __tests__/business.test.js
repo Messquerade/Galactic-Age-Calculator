@@ -37,6 +37,6 @@ describe('SolarAge', () => {
 
   test('should return life expectancy in Earth years dependent on gender and continent lived on', () => {
     reusableAge.calculateLifeExpectancy("Woman", "Northern America");
-    expect(reusableAge.calculatedLifeExpectancy).toEqual()
+    expect(reusableAge.LifeExpectancy).toEqual(81);
   })
 });

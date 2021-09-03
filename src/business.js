@@ -23,4 +23,8 @@ export default class SolarAge {
     this.venusYears = Math.round(this.earthYears / 0.62);
     this.jupiterYears = Math.round(this.earthYears / 11.86);
   }
+
+  calculateLifeExpectancy (gender, continent) {
+
+  }
 }
