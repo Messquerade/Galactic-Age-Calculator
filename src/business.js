@@ -35,7 +35,24 @@ export default class SolarAge {
         ["Africa", 65]
       ]
     )
-    console.log(lifeExpectanciesFemale.get(this.continent));
-    this.lifeExpectancy = lifeExpectanciesFemale.get(this.continent);
+    let lifeExpectanciesMale = new Map (
+      [
+        ["Northern America", 77],
+        ["Europe", 75],
+        ["Oceania", 77],
+        ["Asia", 71],
+        ["Latin America and the Caribbean", 72],
+        ["Africa", 62]
+      ]
+    )
+    if (this.gender === "female") {
+      this.lifeExpectancy = lifeExpectanciesFemale.get(this.continent);
+    } else if (this.gender === "male") {
+      this.lifeExpectancy = lifeExpectanciesMale.get(this.continent);
+    } else {
+      this.lifeExpectancy = Math.round((lifeExpectanciesFemale.get(this.continent) + lifeExpectanciesMale.get(this.continent)) / 2);
+    }
   }
+
+  
 }
