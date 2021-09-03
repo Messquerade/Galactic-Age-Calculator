@@ -79,6 +79,14 @@ describe('SolarAge', () => {
     expect(reusableAge.solarAgeSummary()).toMatch("Time left to live on Venus: 85 years");
     expect(reusableAge.solarAgeSummary()).toMatch("Time left to live on Mars: 28 years");
     expect(reusableAge.solarAgeSummary()).toMatch("Time left to live on Jupiter: 4 years");
+  });
+
+  test('should return a summary of object with years past life expectancy on each planet if life expectancy is less than age', () => {
+    let anotherAge = new SolarAge(90, "non-binary", "Europe");
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mercury: 46 years")
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Venus: 18 years")
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mars: 6 years")
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Jupiter: 1 years")
   })
 });
 // Age on Venus: 45 years

@@ -78,7 +78,11 @@ export default class SolarAge {
     const summary = `Age on Mercury: ${this.mercuryYears} years
     Age on Venus: ${this.venusYears} years
     Age on Mars: ${this.marsYears} years
-    Age on Jupiter: ${this.jupiterYears} years`;
+    Age on Jupiter: ${this.jupiterYears} years
+    Time left to live on Mercury: ${this.mercuryYearsLeft} years
+    Time left to live on Venus: ${this.venusYearsLeft} years
+    Time left to live on Mars: ${this.marsYearsLeft} years
+    Time left to live on Jupiter: ${this.jupiterYearsLeft} years`;
     return summary;
   }
 }
