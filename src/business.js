@@ -5,18 +5,6 @@ export default class SolarAge {
     this.continent = continent;
   }
   
-  makeConversionMap () {
-    let conversions = new Map (
-      [
-        ["mars", 1.88],
-        ["mercury", .24],
-        ["venus", .62],
-        ["jupiter", 11.86]
-      ]
-    );
-    return conversions;
-  }
-
   calculateSolarAge () {
     this.marsYears = Math.round(this.earthYears / 1.88);
     this.mercuryYears = Math.round(this.earthYears / 0.24);

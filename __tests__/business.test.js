@@ -12,21 +12,6 @@ describe('SolarAge', () => {
     expect(reusableAge.continent).toEqual("Northern America");
   });
   
-  test('should return a map', () => {
-    let conversions = reusableAge.makeConversionMap();
-    expect(conversions instanceof Map).toBeTruthy();
-  });
-  
-  test('should correctly return a map containing the names of the planets as keys and conversion numbers as values', () => {
-    let conversions = reusableAge.makeConversionMap();
-    let entriesIterable = conversions.entries();
-    expect(entriesIterable.next().value).toEqual(["mars", 1.88]);
-    expect(entriesIterable.next().value).toEqual(["mercury", 0.24]);
-    expect(entriesIterable.next().value).toEqual(["venus", 0.62]);
-    expect(entriesIterable.next().value).toEqual(["jupiter", 11.86]);
-  });
-  // wrote two tests at once because I didn't know I would need to test for a simpler behavior before getting a good fail on the more complicated behavior
-
   test('should correctly convert age in Earth years to age in Mars years, Mercury Years, Venus Years, and Jupiter Years', () => {
     reusableAge.calculateSolarAge();
     expect(reusableAge.marsYears).toEqual(15);
@@ -42,7 +27,7 @@ describe('SolarAge', () => {
 
   test('should add property to SolarAge object of life expectancy in Earth years dependent on continent and gender', () => {
     let newAge = new SolarAge(55, "male", "Oceania");
-    let anotherAge = new SolarAge(90, "non-binary", "Europe")
+    let anotherAge = new SolarAge(90, "non-binary", "Europe");
     newAge.calculateLifeExpectancy();
     anotherAge.calculateLifeExpectancy();
     expect(newAge.lifeExpectancy).toEqual(77);
@@ -83,16 +68,9 @@ describe('SolarAge', () => {
 
   test('should return a summary of object with years past life expectancy on each planet if life expectancy is less than age', () => {
     let anotherAge = new SolarAge(90, "non-binary", "Europe");
-    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mercury: 46 years")
-    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Venus: 18 years")
-    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mars: 6 years")
-    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Jupiter: 1 years")
-  })
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mercury: 46 years");
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Venus: 18 years");
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Mars: 6 years");
+    expect(anotherAge.solarAgeSummary()).toMatch("Time lived past life expectancy on Jupiter: 1 years");
+  });
 });
-// Age on Venus: 45 years
-// Age on Mars: 15 years
-// Age on Jupiter: 2 years
-// Time left to live on Mercury: 221 years
-// Time left to live on Venus: 85 years
-// Time left to live on Mars: 28 years
-// Time left to live on Jupiter: 4 years
