@@ -24,7 +24,18 @@ export default class SolarAge {
     this.jupiterYears = Math.round(this.earthYears / 11.86);
   }
 
-  calculateLifeExpectancy (gender, continent) {
-
+  calculateLifeExpectancy () {
+    let lifeExpectanciesFemale = new Map (
+      [
+        ["Northern America", 81],
+        ["Europe", 82],
+        ["Oceania", 81],
+        ["Asia", 75],
+        ["Latin America and the Caribbean", 79],
+        ["Africa", 65]
+      ]
+    )
+    console.log(lifeExpectanciesFemale.get(this.continent));
+    this.lifeExpectancy = lifeExpectanciesFemale.get(this.continent);
   }
 }
