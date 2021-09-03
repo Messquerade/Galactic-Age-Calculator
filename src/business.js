@@ -34,7 +34,7 @@ export default class SolarAge {
         ["Latin America and the Caribbean", 79],
         ["Africa", 65]
       ]
-    )
+    );
     let lifeExpectanciesMale = new Map (
       [
         ["Northern America", 77],
@@ -44,7 +44,7 @@ export default class SolarAge {
         ["Latin America and the Caribbean", 72],
         ["Africa", 62]
       ]
-    )
+    );
     if (this.gender === "female") {
       this.lifeExpectancy = lifeExpectanciesFemale.get(this.continent);
     } else if (this.gender === "male") {

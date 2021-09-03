@@ -56,4 +56,14 @@ describe('SolarAge', () => {
     expect(reusableAge.venusYearsLeft).toEqual(85);
     expect(reusableAge.jupiterYearsLeft).toEqual(4);
   });
+
+  test('should add properties of years lived over life expectancy to SolarAge object if life expectancy is less than age', () => {
+    let anotherAge = new SolarAge(90, "non-binary", "Europe");
+    anotherAge.calculateYearsDifference();
+    expect(anotherAge.earthYearsOver).toEqual(11);
+    expect(anotherAge.marsYearsOver).toEqual(6);
+    expect(anotherAge.mercuryYearsOver).toEqual(46);
+    expect(anotherAge.venusYearsOver).toEqual()
+
+  })
 });
