@@ -15,7 +15,13 @@ describe('SolarAge', () => {
     expect(reusableAge.marsYears).toEqual(15);
   });
 
-  test('should correctly create a map containing the names of the planets as keys and conversion numbers as values', () => {
+  test('should return a map', () => {
+    let conversions = reusableAge.makeConversionMap();
+    expect(conversions instanceof Map).toBeTruthy();
+  });
+
+  test('should correctly return a map containing the names of the planets as keys and conversion numbers as values', () => {
+    let conversions = reusableAge.makeConversionMap();
     let entriesIterable = conversions.entries();
     expect(entriesIterable.next().value).toEqual(["Mars", 1.88]);
     expect(entriesIterable.next().value).toEqual(["Mercury", 0.24]);
