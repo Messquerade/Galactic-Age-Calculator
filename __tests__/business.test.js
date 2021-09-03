@@ -48,8 +48,7 @@ describe('SolarAge', () => {
     expect(newAge.lifeExpectancy).toEqual(77);
     expect(anotherAge.lifeExpectancy).toEqual(79);
   });
-  test('should add properties of years left to live on each planet to SolarAge object', () => {
-    reusableAge.calculateLifeExpectancy();
+  test('should add properties of years left to live on each planet to SolarAge object if life expectancy is greater than age', () => {
     reusableAge.calculateYearsDifference();
     expect(reusableAge.earthYearsLeft).toEqual(53);
     expect(reusableAge.marsYearsLeft).toEqual(28);
