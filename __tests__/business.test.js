@@ -4,10 +4,12 @@ describe('SolarAge', () => {
   let reusableAge;
 
   beforeEach(() => {
-    reusableAge = new SolarAge(28);
+    reusableAge = new SolarAge(28, "Woman", "Northern America");
   });
-  test('should correctly create a SolarAge object with age property in earth years', () => {
+  test('should correctly create a SolarAge object with age property in earth years, gender property and continent property', () => {
     expect(reusableAge.earthYears).toEqual(28);
+    expect(reusableAge.gender).toEqual("Woman");
+    expect(reusableAge.continent).toEqual("Northern America");
   });
   
   test('should return a map', () => {
@@ -32,4 +34,9 @@ describe('SolarAge', () => {
     expect(reusableAge.venusYears).toEqual(45);
     expect(reusableAge.jupiterYears).toEqual(2);
   });
+
+  test('should return life expectancy in Earth years dependent on gender and continent lived on', () => {
+    reusableAge.calculateLifeExpectancy("Woman", "Northern America");
+    expect(reusableAge.calculatedLifeExpectancy).toEqual()
+  })
 });
