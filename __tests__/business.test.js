@@ -28,4 +28,5 @@ describe('SolarAge', () => {
     expect(entriesIterable.next().value).toEqual(["Venus", 0.62]);
     expect(entriesIterable.next().value).toEqual(["Jupiter", 11.86]);
   });
+  // wrote two tests at once because I needed to test for a simpler behavior before getting a good fail on the more complicated behavior
 });
