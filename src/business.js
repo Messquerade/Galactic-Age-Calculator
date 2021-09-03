@@ -72,6 +72,13 @@ export default class SolarAge {
   }
 
   solarAgeSummary () {
-    
+    this.calculateSolarAge();
+    this.calculateLifeExpectancy();
+    this.calculateYearsDifference();
+    const summary = `Age on Mercury: ${this.mercuryYears} years
+    Age on Venus: ${this.venusYears} years
+    Age on Mars: ${this.marsYears} years
+    Age on Jupiter: ${this.jupiterYears} years`;
+    return summary;
   }
 }
