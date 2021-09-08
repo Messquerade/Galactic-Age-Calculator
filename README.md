@@ -26,13 +26,17 @@ This website will take a user's age, gender, and the continent they live on as i
 
 * _Clone this repository to your desktop_
 * _Open in text editor_
+* _If you are using a Mac: open the package.json and find the scripts property,_  
+  _change the line_ `"start": "npm run build & webpack-dev-server --open --mode development",`  
+  _to_ `"start": "npm run build; webpack-dev-server --open --mode development",`
 * _Navigate to the top directory and type, $ npm install, into terminal_
-* _type, $ npm run start, to open file in your browser_
+* _type, $ npm run build, to build your environment_
+* _type, $ npm run start, to open in your browser_
 
 ## Known Bugs
 
 * _Does not work for negative numbers or strings_
-
+* _UI not yet built_
 ## License
 
 MIT
